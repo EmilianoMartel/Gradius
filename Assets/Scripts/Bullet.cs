@@ -14,7 +14,6 @@ public class Bullet : MonoBehaviour
     [SerializeField] private State state;
     [SerializeField] private int direction;
 
-    // Start is called before the first frame update
     void Start()
     {
         switch (state)
@@ -27,7 +26,7 @@ public class Bullet : MonoBehaviour
                 break;
         }
     }
-    // Update is called once per frame
+
     void Update()
     {
         gameObject.transform.Translate(direction * p_speed * Time.deltaTime, 0, 0);
