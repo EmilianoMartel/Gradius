@@ -31,4 +31,9 @@ public class Bullet : MonoBehaviour
     {
         gameObject.transform.Translate(direction * p_speed * Time.deltaTime, 0, 0);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroy(this.gameObject);
+    }
 }
