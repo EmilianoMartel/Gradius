@@ -143,6 +143,6 @@ public class Enemy : Ships
 
     private void TimeShootSelection()
     {
-        m_timeShoot = Random.Range(m_shootTimeRest,5);
+        m_timeShoot = Random.Range(p_shootTimeRest,5);
     }
 }

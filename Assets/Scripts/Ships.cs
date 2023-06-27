@@ -9,8 +9,8 @@ public class Ships : MonoBehaviour
     [SerializeField] protected float p_speed;
     [SerializeField] protected Bullet bullet;
     [SerializeField] protected GameObject pointShoot;
-    [SerializeField] protected float m_shootTimeRest;
-    [SerializeField] protected Camera m_mainCamera;
+    [SerializeField] protected float p_shootTimeRest;
+    [SerializeField] protected Camera p_mainCamera;
     protected float upperLimit;
     protected float lowerLimit;
     protected float leftLimit;
@@ -25,7 +25,7 @@ public class Ships : MonoBehaviour
     protected void Move(Vector2 direction)
     {
         Vector3 newPosition = transform.position + (Vector3)(direction * p_speed * Time.deltaTime);
-        //newPosition.x = Mathf.Clamp(newPosition.x, leftLimit, rightLimit);
+        newPosition.x = Mathf.Clamp(newPosition.x, leftLimit, rightLimit);
         newPosition.y = Mathf.Clamp(newPosition.y, lowerLimit, upperLimit);
         transform.position = newPosition;
     }
@@ -52,11 +52,11 @@ public class Ships : MonoBehaviour
 
     protected void CameraLimit()
     {
-        float height = m_mainCamera.orthographicSize;
-        //float width = height * m_mainCamera.aspect;
-        upperLimit = m_mainCamera.transform.position.y + height;
-        lowerLimit = m_mainCamera.transform.position.y - height;
-        //leftLimit = m_mainCamera.transform.position.x - width;
-        //rightLimit = m_mainCamera.transform.position.x + width;
+        float height = p_mainCamera.orthographicSize;
+        float width = height * p_mainCamera.aspect;
+        upperLimit = p_mainCamera.transform.position.y + height;
+        lowerLimit = p_mainCamera.transform.position.y - height;
+        leftLimit = p_mainCamera.transform.position.x - width;
+        rightLimit = p_mainCamera.transform.position.x + width;
     }
 }
