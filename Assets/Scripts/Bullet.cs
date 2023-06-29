@@ -13,9 +13,12 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float p_speed;
     [SerializeField] private State state;
     [SerializeField] private int direction;
+    [SerializeField] private float deleteTime = 6f;
+    private float actualTime;
 
     void Start()
     {
+        deleteTime = 6f;
         switch (state)
         {
             case State.Player:
@@ -30,6 +33,11 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         gameObject.transform.Translate(direction * p_speed * Time.deltaTime, 0, 0);
+        actualTime += Time.deltaTime;
+        if (actualTime >= deleteTime)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
