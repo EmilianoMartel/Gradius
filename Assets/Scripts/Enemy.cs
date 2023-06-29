@@ -11,7 +11,7 @@ public class Enemy : Ships
         Up,
         Down
     }
-    private enum PatternMovement
+    public enum PatternMovement
     {
         UpDown,
         DownUp,
@@ -21,7 +21,7 @@ public class Enemy : Ships
 
     //variables patron movimiento
     private MovementType m_MovementType;
-    [SerializeField] private PatternMovement m_PatternMovement;
+    public PatternMovement m_PatternMovement;
     private Vector2 m_movement = new Vector2(0,0);
     private bool lineType;
     [SerializeField] private float m_timeChange; //solo para los lineType
@@ -33,6 +33,7 @@ public class Enemy : Ships
 
     void Start()
     {
+        p_mainCamera = FindAnyObjectByType<Camera>();
         CameraLimit();
         MovePattern();
         TimeShootSelection();
@@ -108,8 +109,6 @@ public class Enemy : Ships
                 MoveTypeSelection();
                 break;
         }
-        Debug.Log(m_MovementType);
-        Debug.Log(m_PatternMovement);
     }
 
     private void LineTypeChange()
@@ -127,8 +126,6 @@ public class Enemy : Ships
     }
     private void DiagonalTypeChange()
     {
-        Debug.Log(upperLimit);
-        Debug.Log(lowerLimit);
         if(transform.position.y >= upperLimit)
         {
             m_MovementType = MovementType.Down;
