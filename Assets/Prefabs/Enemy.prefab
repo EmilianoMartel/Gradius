@@ -58,7 +58,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8037774441836463018}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.5, y: -0.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -66,7 +66,7 @@ Transform:
   - {fileID: 7145345830356685227}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8037774441836463017
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -108,7 +108,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 187216625, guid: 6cd0a653e8fe77747a77eeece86bff7b, type: 3}
+  m_Sprite: {fileID: -491888095, guid: 6cd0a653e8fe77747a77eeece86bff7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -135,9 +135,11 @@ MonoBehaviour:
   p_speed: 1
   bullet: {fileID: -9200961209809646836, guid: 272bd1f85919f8a4c8a04322b05406e2, type: 3}
   pointShoot: {fileID: 4160633627511009823}
-  m_shootTimeRest: 2
-  m_mainCamera: {fileID: 0}
-  m_MovementType: 0
+  p_shootTimeRest: 0
+  p_mainCamera: {fileID: 0}
+  m_PatternMovement: 0
+  m_timeChange: 5
+  sumPosition: {x: 0, y: 0, z: 0}
 --- !u!61 &8418777911166311642
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -155,7 +157,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.46, y: 0.355}
+    oldSize: {x: 0.335, y: 0.36}
     newSize: {x: 0.46, y: 0.355}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
