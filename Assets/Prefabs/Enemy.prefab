@@ -41,9 +41,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8037774441836463016}
   - component: {fileID: 8037774441836463017}
-  - component: {fileID: 140257142673751917}
   - component: {fileID: 8418777911166311642}
   - component: {fileID: 8692053235326130968}
+  - component: {fileID: 194988455445818217}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -119,27 +119,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &140257142673751917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8037774441836463018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cac02f75a1fac9644b46d28220e47af5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  p_life: 10
-  p_speed: 1
-  bullet: {fileID: -9200961209809646836, guid: 272bd1f85919f8a4c8a04322b05406e2, type: 3}
-  pointShoot: {fileID: 4160633627511009823}
-  p_shootTimeRest: 0
-  p_mainCamera: {fileID: 0}
-  m_PatternMovement: 0
-  m_timeChange: 5
-  sumPosition: {x: 0, y: 0, z: 0}
 --- !u!61 &8418777911166311642
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -187,3 +166,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &194988455445818217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8037774441836463018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172b1ae904d811944afee97c35c5ae01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p_life: 10
+  p_speed: 1
+  bullet: {fileID: 8350832954139106280, guid: 73bc37379f5c8364990e3f16979a6a6c, type: 3}
+  pointShoot: {fileID: 4160633627511009823}
+  p_shootTimeRest: 1
+  p_mainCamera: {fileID: 0}
+  m_PatternMovement: 1
+  m_timeChange: 1
