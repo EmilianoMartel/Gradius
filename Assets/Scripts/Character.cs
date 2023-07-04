@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Ships : MonoBehaviour
+public class Character : MonoBehaviour
 {
     [SerializeField] protected int p_life;
     [SerializeField] protected float p_speed;
