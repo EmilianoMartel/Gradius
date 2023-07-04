@@ -6,4 +6,6 @@ using UnityEngine;
 public class WaveData : ScriptableObject
 {
     [SerializeField] public List<Enemy> enemyList;
+    [SerializeField] public int minEnemy;
+    [SerializeField] public int wavesNum;
 }
