@@ -10,15 +10,24 @@ public class TowerEnemy : Enemy
         LeftDirection
     }
     public PatternMovement m_PatternMovement;
+    [SerializeField] int shootQuantity;
 
     void Start()
     {
         PatternMovementeElection();
+        TimeShootSelection();
     }
 
     private void Update()
     {
         Move(m_movement);
+        actualTime += Time.deltaTime;
+        if (actualTime >= m_timeShoot)
+        {
+            StartCoroutine(ShootTower());
+            TimeShootSelection();
+            actualTime = 0;
+        }
     }
 
     private void PatternMovementeElection()
@@ -36,8 +45,12 @@ public class TowerEnemy : Enemy
         }
     }
     
-    private void ShootTower()
+    private IEnumerator ShootTower()
     {
-
+        for (int i = 0; i < shootQuantity; i++)
+        {
+            Shoot();
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 }
