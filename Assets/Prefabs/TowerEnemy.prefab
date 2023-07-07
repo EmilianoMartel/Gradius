@@ -135,9 +135,10 @@ MonoBehaviour:
   p_speed: 1
   bullet: {fileID: -9200961209809646836, guid: 272bd1f85919f8a4c8a04322b05406e2, type: 3}
   pointShoot: {fileID: 4217106724021746595}
-  p_shootTimeRest: 0
+  p_shootTimeRest: 1
   p_mainCamera: {fileID: 0}
-  m_PatternMovement: 0
+  m_PatternMovement: 1
+  shootQuantity: 1
 --- !u!50 &-6369794872736753939
 Rigidbody2D:
   serializedVersion: 4

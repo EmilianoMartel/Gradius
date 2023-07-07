@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad411614e62ba04e8796c8251fbd538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p_speed: 1
+  p_speed: 2
   state: 1
   direction: {x: 0, y: 0}
   deleteTime: 6

@@ -184,5 +184,5 @@ MonoBehaviour:
   pointShoot: {fileID: 4160633627511009823}
   p_shootTimeRest: 1
   p_mainCamera: {fileID: 0}
-  m_PatternMovement: 1
+  m_PatternMovement: 2
   m_timeChange: 1
