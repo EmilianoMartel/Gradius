@@ -45,12 +45,12 @@ public class ShipEnemy : Enemy
         switch (m_PatternMovement)
         {
             case PatternMovement.UpDown:
-                m_MovementType = MovementType.Up;
+                m_MovementType = MovementType.DiagonalUp;
                 lineType = false;
                 MoveTypeSelection();
                 break;
             case PatternMovement.DownUp:
-                m_MovementType = MovementType.Down;
+                m_MovementType = MovementType.DiagonalDown;
                 lineType = false;
                 MoveTypeSelection();
                 break;
@@ -87,12 +87,12 @@ public class ShipEnemy : Enemy
     {
         if (m_PatternMovement == PatternMovement.LineUp)
         {
-            m_MovementType = MovementType.Up;
+            m_MovementType = MovementType.DiagonalUp;
             MoveTypeSelection();
         }
         else
         {
-            m_MovementType = MovementType.Down;
+            m_MovementType = MovementType.DiagonalDown;
             MoveTypeSelection();
         }
     }
@@ -100,12 +100,12 @@ public class ShipEnemy : Enemy
     {
         if (transform.position.y >= upperLimit)
         {
-            m_MovementType = MovementType.Down;
+            m_MovementType = MovementType.DiagonalDown;
             MoveTypeSelection();
         }
         if (transform.position.y <= lowerLimit)
         {
-            m_MovementType = MovementType.Up;
+            m_MovementType = MovementType.DiagonalUp;
             MoveTypeSelection();
         }
     }

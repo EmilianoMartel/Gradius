@@ -8,9 +8,11 @@ public class Enemy : Character
     protected enum MovementType
     {
         Line,
+        DiagonalUp,
+        DiagonalDown,
+        LineReverse,
         Up,
-        Down,
-        LineReverse
+        Down
     }
 
     //variables patron movimiento
@@ -36,17 +38,25 @@ public class Enemy : Character
                 m_movement.x = -1f;
                 m_movement.y = 0f;
                 break;
-            case MovementType.Up:
+            case MovementType.DiagonalUp:
                 m_movement.x = -1f;
                 m_movement.y = 1f;
                 break;
-            case MovementType.Down:
+            case MovementType.DiagonalDown:
                 m_movement.x = -1f;
                 m_movement.y = -1f;
                 break;
             case MovementType.LineReverse:
                 m_movement.x = 1f;
                 m_movement.y = 0f;
+                break;
+            case MovementType.Up:
+                m_movement.x = 0f;
+                m_movement.y = 1f;
+                break;
+            case MovementType.Down:
+                m_movement.x = 0f;
+                m_movement.y = -1f;
                 break;
         }
     }      
