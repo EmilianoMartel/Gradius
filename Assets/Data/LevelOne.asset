@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb7a0fa44c9f0843b06783b5dffd63c, type: 3}
   m_Name: LevelOne
   m_EditorClassIdentifier: 
-  enemyList:
-  - {fileID: 140257142673751917, guid: 4595c483cd091664491d1717d28149cb, type: 3}
-  - {fileID: 140257142673751917, guid: 4595c483cd091664491d1717d28149cb, type: 3}
-  - {fileID: 140257142673751917, guid: 4595c483cd091664491d1717d28149cb, type: 3}
-  - {fileID: 140257142673751917, guid: 4595c483cd091664491d1717d28149cb, type: 3}
+  tower: {fileID: 5224765849152983083, guid: 508d316670965454db954c8cb8abcd14, type: 3}
+  ship: {fileID: 194988455445818217, guid: 4595c483cd091664491d1717d28149cb, type: 3}
+  boss: {fileID: 0}
+  minEnemy: 0
+  maxEnemy: 0
+  wavesEnemyNum: 0
+  wavesGameNum: 0

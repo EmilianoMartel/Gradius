@@ -5,7 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WaveData", menuName = "Data/WaveData")]
 public class WaveData : ScriptableObject
 {
-    [SerializeField] public List<Enemy> enemyList;
+    [SerializeField] public TowerEnemy tower;
+    [SerializeField] public ShipEnemy ship;
+    [SerializeField] public Boss boss;
     [SerializeField] public int minEnemy;
-    [SerializeField] public int wavesNum;
+    [SerializeField] public int maxEnemy;
+    [SerializeField] public int wavesEnemyNum;
+    [SerializeField] public int wavesGameNum;
 }
