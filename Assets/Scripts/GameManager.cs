@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     //variable victoria
     [SerializeField] public bool p_victory;
 
+    public EnemyWave enemyWave;
+
     //Lo convertimos en un Singelton
     private void Awake()
     {
@@ -34,5 +36,10 @@ public class GameManager : MonoBehaviour
         {
             p_victory = false;
         }
+    }
+
+    public void KillEnemy()
+    {
+        EnemyWave.INSTANCE.EnemyKilled();
     }
 }

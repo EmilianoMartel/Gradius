@@ -40,12 +40,12 @@ public class Character : MonoBehaviour
         p_life += health;
     }
 
-    protected void Shoot()
+    protected virtual void Shoot()
     {
         Instantiate(bullet,pointShoot.transform.position,Quaternion.identity);
     }
 
-    protected void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(this.gameObject);
     }

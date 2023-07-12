@@ -54,6 +54,10 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            GameManager.INSTANCE.KillEnemy();
+        }
         Destroy(this.gameObject);
     }
 }
