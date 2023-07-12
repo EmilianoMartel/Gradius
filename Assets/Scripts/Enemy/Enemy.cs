@@ -12,7 +12,9 @@ public class Enemy : Character
         DiagonalDown,
         LineReverse,
         Up,
-        Down
+        Down,
+        ReverseDiagonalUp,
+        ReverseDiagonalDown
     }
 
     //variables patron movimiento
@@ -30,6 +32,7 @@ public class Enemy : Character
         TimeShootSelection();
     }
 
+    //Function to choose the type of movement
     protected void MoveTypeSelection()
     {
         switch (m_MovementType)
@@ -56,6 +59,14 @@ public class Enemy : Character
                 break;
             case MovementType.Down:
                 m_movement.x = 0f;
+                m_movement.y = -1f;
+                break;
+            case MovementType.ReverseDiagonalUp:
+                m_movement.x = 1f;
+                m_movement.y = 1f;
+                break;
+            case MovementType.ReverseDiagonalDown:
+                m_movement.x = 1f;
                 m_movement.y = -1f;
                 break;
         }

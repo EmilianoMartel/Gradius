@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using static UnityEngine.UI.ScrollRect;
 
 public class ShipEnemy : Enemy
@@ -17,10 +19,24 @@ public class ShipEnemy : Enemy
     private bool lineType;
     [SerializeField] private float m_timeChange; //solo para los lineType
     private float actualTimeChange = 0;
+    private bool reverse;
+    private System.Random m_Random;
 
     private void Start()
     {
         MovePattern();
+        reverse = false;
+        m_Random = new System.Random();
+    }
+
+    public void SetSeed(int seed)
+    {
+        m_Random = new System.Random(seed);
+    }
+
+    public void DefinePattern()
+    {
+        m_PatternMovement = (PatternMovement)m_Random.Next(Enum.GetValues(typeof(PatternMovement)).Length);
     }
 
     private void Update()
@@ -34,10 +50,6 @@ public class ShipEnemy : Enemy
             TimeShootSelection();
             actualTime = 0;
         }
-        /*if (transform.position.x <= leftLimit)
-        {
-            Destroy(gameObject);
-        }*/
     }
 
     private void MovePattern()
@@ -66,6 +78,7 @@ public class ShipEnemy : Enemy
                 break;
         }
     }
+
     private void GeneralChange()
     {
         if (lineType)
@@ -83,6 +96,7 @@ public class ShipEnemy : Enemy
         }
     }
 
+    //Funcion que cambia de direccion lineal a diagonal
     private void LineTypeChange()
     {
         if (m_PatternMovement == PatternMovement.LineUp)
@@ -96,17 +110,47 @@ public class ShipEnemy : Enemy
             MoveTypeSelection();
         }
     }
+
+    //Function to change the movementType when the ship touch the Upper or Down Camera limit
     private void DiagonalTypeChange()
     {
-        if (transform.position.y >= upperLimit)
+        //This part is for when it hits the Right or Left limits
+        if (transform.position.x <= leftLimit)
         {
-            m_MovementType = MovementType.DiagonalDown;
+            m_MovementType |= MovementType.ReverseDiagonalUp;
             MoveTypeSelection();
+            reverse = true;
+        }if(transform.position.x >= rightLimit)
+        {
+            m_MovementType |= MovementType.DiagonalUp;
+            MoveTypeSelection();
+            reverse = false;
         }
-        if (transform.position.y <= lowerLimit)
+        if (!reverse)
         {
-            m_MovementType = MovementType.DiagonalUp;
-            MoveTypeSelection();
+            if (transform.position.y >= upperLimit)
+            {
+                m_MovementType = MovementType.DiagonalDown;
+                MoveTypeSelection();
+            }
+            if (transform.position.y <= lowerLimit)
+            {
+                m_MovementType = MovementType.DiagonalUp;
+                MoveTypeSelection();
+            }
+        }
+        else
+        {
+            if (transform.position.y >= upperLimit)
+            {
+                m_MovementType = MovementType.ReverseDiagonalDown;
+                MoveTypeSelection();
+            }
+            if (transform.position.y <= lowerLimit)
+            {
+                m_MovementType = MovementType.ReverseDiagonalUp;
+                MoveTypeSelection();
+            }
         }
     }
 }
