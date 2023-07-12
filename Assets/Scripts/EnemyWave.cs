@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class EnemyWave : MonoBehaviour
 {
+    public static EnemyWave INSTANCE;
     [SerializeField] WaveData waveData;
     [SerializeField] Vector3 p_position;
     [SerializeField] float enemyNum;
     private int currentWave;
     private bool _activateWave = false;
-    private List<Enemy> _enemyList = new List<Enemy>();
+
+    //variable change wave
+    private int numEnemy;
 
     //variables spawner
     [SerializeField] GameObject spawnTowerUp;
@@ -20,9 +23,24 @@ public class EnemyWave : MonoBehaviour
     //variables WaveElection
     private int waveCount;
 
+    //Lo convertimos en un Singelton
+    private void Awake()
+    {
+        if (INSTANCE != null)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            INSTANCE = this;
+            DontDestroyOnLoad(this);
+        }
+    }
+
     private void Start()
     {
         currentWave = 0;
+        numEnemy = 0;
         RandomGenerationSpawn();
     }
 
@@ -33,9 +51,13 @@ public class EnemyWave : MonoBehaviour
 
     private IEnumerator WavesShip()
     {
+        int waveSeed = Random.Range(0,int.MaxValue);
         for (int i = 0; i <= enemyNum; i++)
         {
-            _enemyList.Add(Instantiate(waveData.ship, transform.position, Quaternion.identity));
+            ShipEnemy enemy = Instantiate(waveData.ship, transform.position, Quaternion.identity);
+            enemy.SetSeed(waveSeed);
+            enemy.DefinePattern();
+            numEnemy++;
             yield return new WaitForSeconds(0.5f);
         }
     }
@@ -43,6 +65,7 @@ public class EnemyWave : MonoBehaviour
     private void TowerSpawn()
     {
         Instantiate(waveData.tower,transform.position,Quaternion.identity);
+        numEnemy++;
     }
 
     private void MaxEnemyGenerator()
@@ -52,7 +75,12 @@ public class EnemyWave : MonoBehaviour
 
     private void ChangeWave()
     {
-
+        if (waveData.wavesEnemyNum >= waveCount)
+        {
+            Debug.Log("alo");
+        }
+        waveCount++;
+        RandomGenerationSpawn();
     }
 
     private void CallSpawn()
@@ -60,7 +88,7 @@ public class EnemyWave : MonoBehaviour
         int wave;
         for (int i = 0; i <= waveCount; i++)
         {
-            wave = Random.Range(0, 1);
+            wave = Random.Range(0, 2);
             if (wave == 0)
             {
                 MaxEnemyGenerator();
@@ -83,5 +111,14 @@ public class EnemyWave : MonoBehaviour
             waveCount = Random.Range(2, currentWave);
         }
         CallSpawn();
+    }
+
+    public void EnemyKilled()
+    {
+        numEnemy--;
+        if(numEnemy <= 0)
+        {
+            ChangeWave();
+        }
     }
 }
