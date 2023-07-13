@@ -53,7 +53,6 @@ public class Boss : Enemy
         }
         else if (transform.position.y <= lowerLimit+0.2)
         {
-            Debug.Log("vuelve a cambiar");
             m_MovementType = MovementType.Up;
             MoveTypeSelection();
         }
