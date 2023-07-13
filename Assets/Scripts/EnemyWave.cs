@@ -8,8 +8,6 @@ public class EnemyWave : MonoBehaviour
     [SerializeField] WaveData waveData;
     [SerializeField] Vector3 p_position;
     [SerializeField] float enemyNum;
-    private int currentWave;
-    private bool _activateWave = false;
 
     //variable change wave
     private int numEnemy;
@@ -19,8 +17,11 @@ public class EnemyWave : MonoBehaviour
     [SerializeField] GameObject spawnTowerDown;
     [SerializeField] GameObject spawnShipUp;
     [SerializeField] GameObject spawnShipDown;
+    private Vector3 spawnShipPoint;
+    private Vector3 spawnTowerPoint;
 
     //variables WaveElection
+    private int currentWave;
     private int waveCount;
 
     //Lo convertimos en un Singelton
@@ -44,17 +45,13 @@ public class EnemyWave : MonoBehaviour
         RandomGenerationSpawn();
     }
 
-    private void Update()
-    {
-
-    }
-
+    //Function Spawn Ship Enemy
     private IEnumerator WavesShip()
     {
         int waveSeed = Random.Range(0,int.MaxValue);
         for (int i = 0; i <= enemyNum; i++)
         {
-            ShipEnemy enemy = Instantiate(waveData.ship, transform.position, Quaternion.identity);
+            ShipEnemy enemy = Instantiate(waveData.ship, spawnShipPoint, Quaternion.identity);
             enemy.SetSeed(waveSeed);
             enemy.DefinePattern();
             numEnemy++;
@@ -62,9 +59,17 @@ public class EnemyWave : MonoBehaviour
         }
     }
 
-    private void TowerSpawn()
+    //Function Spawn Tower Enemy
+    private void TowerSpawn(string upOrDown)
     {
-        Instantiate(waveData.tower,transform.position,Quaternion.identity);
+        if(upOrDown == "UP")
+        {
+            Instantiate(waveData.towerUp, spawnTowerPoint, Quaternion.identity);
+        }
+        else if(upOrDown == "DOWN")
+        {
+            Instantiate(waveData.towerDown, spawnTowerPoint, Quaternion.identity);
+        }
         numEnemy++;
     }
 
@@ -75,12 +80,15 @@ public class EnemyWave : MonoBehaviour
 
     private void ChangeWave()
     {
-        if (waveData.wavesEnemyNum >= waveCount)
+        if (waveData.wavesEnemyNum <= currentWave)
         {
-            Debug.Log("alo");
+            SpawnBoss();
         }
-        waveCount++;
-        RandomGenerationSpawn();
+        else
+        {
+            currentWave++;
+            RandomGenerationSpawn();
+        }        
     }
 
     private void CallSpawn()
@@ -92,10 +100,10 @@ public class EnemyWave : MonoBehaviour
             if (wave == 0)
             {
                 MaxEnemyGenerator();
-                StartCoroutine(WavesShip());
+                PointSpawnShipSelection();
             } else if (wave == 1)
             {
-                TowerSpawn();
+                PointSpawnTowerSelection();
             }
         }
     }
@@ -119,6 +127,56 @@ public class EnemyWave : MonoBehaviour
         if(numEnemy <= 0)
         {
             ChangeWave();
+        }
+    }
+
+    private void SpawnBoss()
+    {
+        Instantiate(waveData.boss, transform.position, Quaternion.identity);
+    }
+
+    //Point Spawn Selection for Enemy Ship
+    private void PointSpawnShipSelection()
+    {
+        int randomSpawn = Random.Range(0, 3);
+        if (randomSpawn == 0)
+        {
+            spawnShipPoint = transform.position;
+        }
+        else if (randomSpawn == 1)
+        {
+            spawnShipPoint = spawnShipUp.transform.position;
+        }
+        else
+        {
+            spawnShipPoint = spawnShipDown.transform.position;
+        }
+        StartCoroutine(WavesShip());
+    }
+
+    //Point Spawn Selection Tower
+    private void PointSpawnTowerSelection()
+    {
+        int randomSpawn = Random.Range(0,4);
+        if(randomSpawn == 0)
+        {
+            spawnTowerPoint = spawnShipUp.transform.position;
+            TowerSpawn("UP");
+        }
+        else if(randomSpawn == 1)
+        {
+            spawnTowerPoint = spawnTowerUp.transform.position;
+            TowerSpawn("UP");
+        }
+        else if (randomSpawn == 2)
+        {
+            spawnTowerPoint = spawnTowerDown.transform.position;
+            TowerSpawn("DOWN");
+        }
+        else
+        {
+            spawnTowerPoint = spawnShipDown.transform.position;
+            TowerSpawn("DOWN");
         }
     }
 }
