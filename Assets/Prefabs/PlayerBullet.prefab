@@ -101,7 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p_speed: 2
   state: 0
-  direction: 0
+  damage: 1
+  direction: {x: 0, y: 0}
   deleteTime: 6
 --- !u!70 &2096973204064063022
 CapsuleCollider2D:

@@ -14,9 +14,11 @@ public class Bullet : MonoBehaviour
 
     [SerializeField] private float p_speed;
     [SerializeField] private State state;
+    [SerializeField] private int damage;
     [SerializeField] private Vector2 direction;
     [SerializeField] private float deleteTime = 6f;
     private float actualTime;
+    private Character character;
 
     void Start()
     {
@@ -56,6 +58,8 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
+            character = other.gameObject.GetComponent<Character>();
+            character.Damage(damage);
             GameManager.INSTANCE.KillEnemy();
         }
         Destroy(this.gameObject);

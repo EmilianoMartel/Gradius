@@ -30,14 +30,14 @@ public class Character : MonoBehaviour
         transform.position = newPosition;
     }
 
-    protected void Damage(int damage)
+    public virtual void Damage(int damage)
     {
         p_life -= damage;
-    }
-
-    protected void Health(int health)
-    {
-        p_life += health;
+        if (p_life <= 0)
+        {
+            Debug.Log("lo destruye");
+            Destroy(this.gameObject);
+        }
     }
 
     protected virtual void Shoot()
@@ -45,10 +45,11 @@ public class Character : MonoBehaviour
         Instantiate(bullet,pointShoot.transform.position,Quaternion.identity);
     }
 
-    protected virtual void OnTriggerEnter2D(Collider2D other)
+   /* protected virtual void OnTriggerEnter2D(Collider2D other)
     {
+
         Destroy(this.gameObject);
-    }
+    }*/
 
     protected void CameraLimit()
     {

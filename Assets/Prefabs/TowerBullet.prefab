@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p_speed: 2
   state: 3
+  damage: 1
   direction: {x: 0, y: 0}
   deleteTime: 6
 --- !u!58 &8414824101510855241
