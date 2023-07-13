@@ -28,6 +28,7 @@ public class TowerEnemy : Enemy
             TimeShootSelection();
             actualTime = 0;
         }
+        ChangePattern();
     }
 
     private void PatternMovementeElection()
@@ -51,6 +52,19 @@ public class TowerEnemy : Enemy
         {
             Shoot();
             yield return new WaitForSeconds(0.5f);
+        }
+    }
+
+    private void ChangePattern()
+    {
+        if (transform.position.x >= rightLimit)
+        {
+            m_MovementType = MovementType.Line;
+            MoveTypeSelection();
+        }else if(transform.position.x <= leftLimit)
+        {
+            m_MovementType = MovementType.LineReverse;
+            MoveTypeSelection();
         }
     }
 }
