@@ -5,7 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WaveData", menuName = "Data/WaveData")]
 public class WaveData : ScriptableObject
 {
-    [SerializeField] public TowerEnemy tower;
+    [SerializeField] public TowerEnemy towerUp;
+    [SerializeField] public TowerEnemy towerDown;
     [SerializeField] public ShipEnemy ship;
     [SerializeField] public Boss boss;
     [SerializeField] public int minEnemy;

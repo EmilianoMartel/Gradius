@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: -6369794872736753939}
   - component: {fileID: 6994811108205452986}
   m_Layer: 6
-  m_Name: TowerEnemy
+  m_Name: TowerEnemyUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 5199496759315222645, guid: 3a193848c8d389f4c9eb72aa4a07aa1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 0.36, y: 0.44}
   m_AdaptiveModeThreshold: 0.5
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p_life: 1
   p_speed: 1
-  bullet: {fileID: -9200961209809646836, guid: 272bd1f85919f8a4c8a04322b05406e2, type: 3}
+  bullet: {fileID: -9200961209809646836, guid: 05ad7c55684d1b0438171162358e9754, type: 3}
   pointShoot: {fileID: 4217106724021746595}
   p_shootTimeRest: 1
   p_mainCamera: {fileID: 0}
