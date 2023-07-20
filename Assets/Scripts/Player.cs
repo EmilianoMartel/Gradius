@@ -6,7 +6,8 @@ public class Player : Character
 {
     void Update()
     {
-        if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        //GameManager.INSTANCE.p_lifeGame = p_life;
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             PlayerMove();
         }

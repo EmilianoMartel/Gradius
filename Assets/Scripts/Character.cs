@@ -35,8 +35,7 @@ public class Character : MonoBehaviour
         p_life -= damage;
         if (p_life <= 0)
         {
-            Debug.Log("lo destruye");
-            Destroy(this.gameObject);
+            KillEnemy();
         }
     }
 
@@ -45,11 +44,10 @@ public class Character : MonoBehaviour
         Instantiate(bullet,pointShoot.transform.position,Quaternion.identity);
     }
 
-   /* protected virtual void OnTriggerEnter2D(Collider2D other)
+    protected virtual void KillEnemy()
     {
-
         Destroy(this.gameObject);
-    }*/
+    }
 
     protected void CameraLimit()
     {
