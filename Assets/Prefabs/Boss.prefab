@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3844188544040663447}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PointShoot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3844188544050934362}
   - component: {fileID: 3844188544050934360}
   - component: {fileID: 932688653710216013}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3844188545331015203}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PointShoot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3844188546028842341}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PointShoot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

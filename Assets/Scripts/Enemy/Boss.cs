@@ -21,7 +21,6 @@ public class Boss : Enemy
         line = true;
         m_MovementType = MovementType.Line;
         MoveTypeSelection();
-        Debug.Log(lowerLimit);
     }
 
     private void Update()
@@ -63,5 +62,11 @@ public class Boss : Enemy
         Instantiate(bullet, pointShoot1.transform.position, Quaternion.identity);
         Instantiate(bullet, pointShoot2.transform.position, Quaternion.identity);
         Instantiate(bullet, pointShoot3.transform.position, Quaternion.identity);
+    }
+
+    protected override void KillEnemy()
+    {
+        GameManager.INSTANCE.EndGame("WIN");
+        base.KillEnemy();
     }
 }
