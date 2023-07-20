@@ -24,6 +24,8 @@ public class EnemyWave : MonoBehaviour
     private int currentWave;
     private int waveCount;
 
+    private bool waveFinish = false;
+
     //Lo convertimos en un Singelton
     private void Awake()
     {
@@ -80,14 +82,17 @@ public class EnemyWave : MonoBehaviour
 
     private void ChangeWave()
     {
-        if (waveData.wavesEnemyNum <= currentWave)
+        if (!waveFinish)
         {
-            SpawnBoss();
-        }
-        else
-        {
-            currentWave++;
-            RandomGenerationSpawn();
+            if (waveData.wavesEnemyNum <= currentWave)
+            {
+                SpawnBoss();
+            }
+            else
+            {
+                currentWave++;
+                RandomGenerationSpawn();
+            }
         }        
     }
 
@@ -133,6 +138,7 @@ public class EnemyWave : MonoBehaviour
     private void SpawnBoss()
     {
         Instantiate(waveData.boss, transform.position, Quaternion.identity);
+        waveFinish = true;
     }
 
     //Point Spawn Selection for Enemy Ship

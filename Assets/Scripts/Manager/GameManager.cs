@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager INSTANCE;
-    [SerializeField] public int p_lifeGame = 3;
+    [SerializeField] public int p_lifeGame;
 
     //variable victoria
     [SerializeField] public bool p_victory;
@@ -31,10 +32,12 @@ public class GameManager : MonoBehaviour
         if (WinOrLose == "WIN")
         {
             p_victory = true;
+            SceneManager.LoadScene("End");
         }
         else if(WinOrLose == "LOSE")
         {
             p_victory = false;
+            SceneManager.LoadScene("End");
         }
     }
 
