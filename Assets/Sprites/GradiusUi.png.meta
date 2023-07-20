@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: 2fb3cf4d832dcaa49bfa1fe589ac2f6d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GradiusUi_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 916
+        width: 648
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f27f54d655d7142821e25ba121de6b
+      internalID: -1681705829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GradiusUi_10
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 784
+        width: 218
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff3aff29bf9dfe49b3ec3b14ed0d653
+      internalID: 432405452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GradiusUi_13
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 793
+        width: 223
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71cf1be92284eff4ca9e4b2227ce5412
+      internalID: -1589521673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GradiusUi_14
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 793
+        width: 223
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946cc0bed7382d94fa90dbcd75b58c8f
+      internalID: 1932447628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GradiusUi_20
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 794
+        width: 299
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2195901a951e0a48b24ca7feabb5c5b
+      internalID: 2020063831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GradiusUi_21
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 679
+        width: 183
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44df17fb7c4da8f4bb5c918fa7d47013
+      internalID: -1363701946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GradiusUi_24
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 686
+        width: 183
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82e938fe9f478542aef5cfbb3ec25b0
+      internalID: 1867246563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GradiusUi_25
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 686
+        width: 183
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b570488c1526424b8a5e9689584a9f4
+      internalID: 2025740104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GradiusUi_31
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 690
+        width: 355
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a126779fcdec84ab6d8a12bff5ab0a
+      internalID: 2006738184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GradiusUi_34
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 562
+        width: 341
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8211de0de4a88eb46bc62235d7053d07
+      internalID: 882665381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GradiusUi_38
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 566
+        width: 340
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41cec72df3996d42ba8a111b8cc9587
+      internalID: -2107299531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GradiusUi_39
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 560
+        width: 346
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3f99b1a549ab341812bc5963da876a
+      internalID: 637886972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GradiusUi_0: -1681705829
+      GradiusUi_1: -2017500215
+      GradiusUi_10: 432405452
+      GradiusUi_11: -1075224254
+      GradiusUi_12: 1998966743
+      GradiusUi_13: -1589521673
+      GradiusUi_14: 1932447628
+      GradiusUi_15: -1954350871
+      GradiusUi_16: 1903791751
+      GradiusUi_17: 290246074
+      GradiusUi_18: -1652389745
+      GradiusUi_19: 1339415936
+      GradiusUi_2: -2082151081
+      GradiusUi_20: 2020063831
+      GradiusUi_21: -1363701946
+      GradiusUi_22: -786300821
+      GradiusUi_23: 1031149983
+      GradiusUi_24: 1867246563
+      GradiusUi_25: 2025740104
+      GradiusUi_26: -1563348588
+      GradiusUi_27: -355051944
+      GradiusUi_28: -1385639563
+      GradiusUi_29: -1758605093
+      GradiusUi_3: -219647314
+      GradiusUi_30: 1772013944
+      GradiusUi_31: 2006738184
+      GradiusUi_32: -90074789
+      GradiusUi_33: -800647506
+      GradiusUi_34: 882665381
+      GradiusUi_35: -310121160
+      GradiusUi_36: -1115202528
+      GradiusUi_37: 1809843516
+      GradiusUi_38: -2107299531
+      GradiusUi_39: 637886972
+      GradiusUi_4: -602237362
+      GradiusUi_40: -602797331
+      GradiusUi_5: 1040308570
+      GradiusUi_6: -2129327654
+      GradiusUi_7: 560298178
+      GradiusUi_8: -2074151280
+      GradiusUi_9: -1469473864
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
