@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class EnemyWave : MonoBehaviour
 {
-    public static EnemyWave INSTANCE;
     [SerializeField] WaveData waveData;
     [SerializeField] Vector3 p_position;
     [SerializeField] float enemyNum;
 
     //variable change wave
-    private int numEnemy;
+    private List<Enemy> spawnedEnemies = new List<Enemy>();
 
     //variables spawner
     [SerializeField] GameObject spawnTowerUp;
@@ -26,24 +27,10 @@ public class EnemyWave : MonoBehaviour
 
     private bool waveFinish = false;
 
-    //Lo convertimos en un Singelton
-    private void Awake()
-    {
-        if (INSTANCE != null)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            INSTANCE = this;
-            DontDestroyOnLoad(this);
-        }
-    }
-
-    private void Start()
+    public void Start()
     {
         currentWave = 0;
-        numEnemy = 0;
+        spawnedEnemies = new List<Enemy>();
         RandomGenerationSpawn();
     }
 
@@ -56,7 +43,8 @@ public class EnemyWave : MonoBehaviour
             ShipEnemy enemy = Instantiate(waveData.ship, spawnShipPoint, Quaternion.identity);
             enemy.SetSeed(waveSeed);
             enemy.DefinePattern();
-            numEnemy++;
+            enemy.enemyKill += EnemyKilled;
+            spawnedEnemies.Add(enemy);
             yield return new WaitForSeconds(0.5f);
         }
     }
@@ -66,13 +54,16 @@ public class EnemyWave : MonoBehaviour
     {
         if(upOrDown == "UP")
         {
-            Instantiate(waveData.towerUp, spawnTowerPoint, Quaternion.identity);
+            TowerEnemy enemy = Instantiate(waveData.towerUp, spawnTowerPoint, Quaternion.identity);
+            enemy.enemyKill += EnemyKilled;
+            spawnedEnemies.Add(enemy);
         }
         else if(upOrDown == "DOWN")
         {
-            Instantiate(waveData.towerDown, spawnTowerPoint, Quaternion.identity);
+            TowerEnemy enemy = Instantiate(waveData.towerDown, spawnTowerPoint, Quaternion.identity);
+            enemy.enemyKill += EnemyKilled;
+            spawnedEnemies.Add(enemy);
         }
-        numEnemy++;
     }
 
     private void MaxEnemyGenerator()
@@ -126,10 +117,11 @@ public class EnemyWave : MonoBehaviour
         CallSpawn();
     }
 
-    public void EnemyKilled()
+    public void EnemyKilled(Enemy enemy)
     {
-        numEnemy--;
-        if(numEnemy <= 0)
+        spawnedEnemies.Remove(enemy);
+        enemy.enemyKill -= EnemyKilled;
+        if (spawnedEnemies.Count <= 0)
         {
             ChangeWave();
         }

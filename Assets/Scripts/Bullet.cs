@@ -60,7 +60,10 @@ public class Bullet : MonoBehaviour
         {
             character = other.gameObject.GetComponent<Character>();
             character.Damage(damage);
-            GameManager.INSTANCE.KillEnemy();
+        }else if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            character = other.gameObject.GetComponent<Character>();
+            character.Damage(damage);
         }
         Destroy(this.gameObject);
     }

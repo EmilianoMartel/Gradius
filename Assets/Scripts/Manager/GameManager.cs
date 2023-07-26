@@ -6,10 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager INSTANCE;
-    [SerializeField] public int p_lifeGame;
-
-    //variable victoria
-    [SerializeField] public bool p_victory;
+    public int p_lifeGame;
+    public bool b_WinOrLose;
 
     public EnemyWave enemyWave;
 
@@ -31,18 +29,14 @@ public class GameManager : MonoBehaviour
     {
         if (WinOrLose == "WIN")
         {
-            p_victory = true;
-            SceneManager.LoadScene("End");
+            b_WinOrLose = true;
+            SceneManager.LoadScene("End");            
+            
         }
         else if(WinOrLose == "LOSE")
         {
-            p_victory = false;
+            b_WinOrLose = false;
             SceneManager.LoadScene("End");
         }
-    }
-
-    public void KillEnemy()
-    {
-        EnemyWave.INSTANCE.EnemyKilled();
     }
 }

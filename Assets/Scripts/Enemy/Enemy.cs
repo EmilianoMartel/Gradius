@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+public delegate void EnemyKill(Enemy enemy);
 public class Enemy : Character
 {
+    public EnemyKill enemyKill;
+
     protected enum MovementType
     {
         Line,
@@ -75,5 +78,11 @@ public class Enemy : Character
     protected void TimeShootSelection()
     {
         m_timeShoot = Random.Range(p_shootTimeRest,5);
+    }
+
+    protected override void Kill()
+    {
+        enemyKill?.Invoke(this);
+        base.Kill();
     }
 }
