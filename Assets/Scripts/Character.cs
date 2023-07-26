@@ -35,7 +35,7 @@ public class Character : MonoBehaviour
         p_life -= damage;
         if (p_life <= 0)
         {
-            KillEnemy();
+            Kill();
         }
     }
 
@@ -44,7 +44,7 @@ public class Character : MonoBehaviour
         Instantiate(bullet,pointShoot.transform.position,Quaternion.identity);
     }
 
-    protected virtual void KillEnemy()
+    protected virtual void Kill()
     {
         Destroy(this.gameObject);
     }

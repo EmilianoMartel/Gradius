@@ -64,9 +64,9 @@ public class Boss : Enemy
         Instantiate(bullet, pointShoot3.transform.position, Quaternion.identity);
     }
 
-    protected override void KillEnemy()
+    protected override void Kill()
     {
         GameManager.INSTANCE.EndGame("WIN");
-        base.KillEnemy();
+        base.Kill();
     }
 }
