@@ -5,7 +5,6 @@ using UnityEngine;
 public class Background : MonoBehaviour
 {
     [SerializeField] GameObject backgroundImage;
-    [SerializeField] GameObject spawnPoint;
     [SerializeField] List<GameObject> backgroundList;
     [SerializeField] float p_direction = -1f;
     [SerializeField] float p_speed = 1f;
@@ -35,7 +34,7 @@ public class Background : MonoBehaviour
     {
         for (int i = 0; i < backgroundList.Count; i++)
         {
-            backgroundList[i].transform.Translate(p_speed * p_direction * Time.deltaTime,0,0);
+            backgroundList[i].transform.Translate(p_speed * p_direction * Time.deltaTime,0,0, Space.World);
             if (backgroundList[i].transform.position.x <= FINAL_POSITION)
             {
                 Destroy(backgroundList[i]);

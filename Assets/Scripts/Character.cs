@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.Animations;
 using UnityEngine.UIElements;
 
 public class Character : MonoBehaviour
@@ -11,6 +12,7 @@ public class Character : MonoBehaviour
     [SerializeField] protected GameObject pointShoot;
     [SerializeField] protected float p_shootTimeRest;
     [SerializeField] protected Camera p_mainCamera;
+    [SerializeField] protected Animator p_animator;
     protected float upperLimit;
     protected float lowerLimit;
     protected float leftLimit;
@@ -35,7 +37,7 @@ public class Character : MonoBehaviour
         p_life -= damage;
         if (p_life <= 0)
         {
-            Kill();
+            p_animator.SetBool("Death", true);
         }
     }
 

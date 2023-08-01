@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,8 @@ public delegate void PlayerDamage(int life);
 public class Player : Character
 {
     public PlayerDamage mDamage;
+    private bool canDamaged = true;
+
     private void Awake()
     {
         mDamage?.Invoke(p_life);
@@ -34,13 +37,29 @@ public class Player : Character
 
     public override void Damage(int damage)
     {
-        base.Damage(damage);
-        mDamage?.Invoke(p_life);
+        if (canDamaged)
+        {
+            base.Damage(damage);
+            mDamage?.Invoke(p_life);
+            Invulnerability();            
+        }
     }
 
     protected override void Kill()
     {
         GameManager.INSTANCE.EndGame("LOSE");
         base.Kill();
+    }
+
+    private void Invulnerability()
+    {
+        canDamaged = false;
+        p_animator.SetBool("Damaged", true);
+    }
+
+    private void Damageable()
+    {
+        canDamaged = true;
+        p_animator.SetBool("Damaged", false);
     }
 }

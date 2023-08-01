@@ -50,4 +50,4 @@ MonoBehaviour:
   - {fileID: 4488241334240733441, guid: 3735fe773fd9db24bbfca487b8f40dc2, type: 3}
   - {fileID: 4488241334240733441, guid: 3735fe773fd9db24bbfca487b8f40dc2, type: 3}
   p_direction: -1
-  p_speed: 0
+  p_speed: 1

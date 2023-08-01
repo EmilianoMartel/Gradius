@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6058459360423878039}
   - component: {fileID: 6460879491386750797}
   - component: {fileID: -5733097499712663796}
+  - component: {fileID: 1315373558415782505}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -106,6 +107,7 @@ MonoBehaviour:
   pointShoot: {fileID: 8686995146823037003}
   p_shootTimeRest: 0
   p_mainCamera: {fileID: 0}
+  p_animator: {fileID: 1315373558415782505}
 --- !u!61 &6460879491386750797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -153,6 +155,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &1315373558415782505
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6058459360423878038}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e35a6b892ce7b79409cc03cd95566050, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8686995146823037003
 GameObject:
   m_ObjectHideFlags: 0

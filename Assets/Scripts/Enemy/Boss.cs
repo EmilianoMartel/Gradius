@@ -69,4 +69,15 @@ public class Boss : Enemy
         GameManager.INSTANCE.EndGame("WIN");
         base.Kill();
     }
+
+    public override void Damage(int damage)
+    {
+        base.Damage(damage);
+        p_animator.SetBool("Damaged", true);
+    }
+
+    private void EndDamage()
+    {
+        p_animator.SetBool("Damaged", false);
+    }
 }
