@@ -5,7 +5,7 @@ using UnityEngine;
 
 public delegate void EnemyKill(Enemy enemy);
 public class Enemy : Character
-{
+{    
     public EnemyKill enemyKill;
 
     protected enum MovementType
@@ -81,7 +81,7 @@ public class Enemy : Character
     }
 
     protected override void Kill()
-    {
+    {        
         enemyKill?.Invoke(this);
         base.Kill();
     }

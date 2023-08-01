@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public delegate void PlayerDamage(int life);
 public class Player : Character
 {
+    [SerializeField] AudioSource shootEffect;
+    [SerializeField] AudioSource damageEffect;
     public PlayerDamage mDamage;
     private bool canDamaged = true;
 
@@ -24,6 +26,7 @@ public class Player : Character
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Shoot();
+            shootEffect.Play();
         }
     }
 
@@ -40,8 +43,9 @@ public class Player : Character
         if (canDamaged)
         {
             base.Damage(damage);
+            damageEffect.Play();
             mDamage?.Invoke(p_life);
-            Invulnerability();            
+            Invulnerability();
         }
     }
 

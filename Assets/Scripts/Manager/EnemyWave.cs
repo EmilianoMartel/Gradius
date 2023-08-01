@@ -10,6 +10,9 @@ public class EnemyWave : MonoBehaviour
     [SerializeField] Vector3 p_position;
     [SerializeField] float enemyNum;
 
+    [SerializeField] AudioSource normalMusic;
+    [SerializeField] AudioSource bossMusic;
+
     //variable change wave
     private List<Enemy> spawnedEnemies = new List<Enemy>();
 
@@ -129,6 +132,8 @@ public class EnemyWave : MonoBehaviour
 
     private void SpawnBoss()
     {
+        normalMusic.Stop();
+        bossMusic.Play();
         Instantiate(waveData.boss, transform.position, Quaternion.identity);
         waveFinish = true;
     }

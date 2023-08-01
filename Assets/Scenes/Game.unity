@@ -1216,6 +1216,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6015333586987852708, guid: 9604c449098e5e9419bbd0083477708b, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6058459360423878037, guid: 9604c449098e5e9419bbd0083477708b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1413,6 +1417,14 @@ PrefabInstance:
     - target: {fileID: 8037774441836463018, guid: 4595c483cd091664491d1717d28149cb, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418777911166311642, guid: 4595c483cd091664491d1717d28149cb, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.335
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418777911166311642, guid: 4595c483cd091664491d1717d28149cb, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4595c483cd091664491d1717d28149cb, type: 3}

@@ -7,6 +7,7 @@ public class Boss : Enemy
     [SerializeField] private GameObject pointShoot1;
     [SerializeField] private GameObject pointShoot2;
     [SerializeField] private GameObject pointShoot3;
+    [SerializeField] private AudioSource damagedEffect;
     private bool line;
 
     private void Awake()
@@ -73,6 +74,7 @@ public class Boss : Enemy
     public override void Damage(int damage)
     {
         base.Damage(damage);
+        damagedEffect.Play();
         p_animator.SetBool("Damaged", true);
     }
 

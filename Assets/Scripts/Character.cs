@@ -13,6 +13,7 @@ public class Character : MonoBehaviour
     [SerializeField] protected float p_shootTimeRest;
     [SerializeField] protected Camera p_mainCamera;
     [SerializeField] protected Animator p_animator;
+    [SerializeField] protected AudioSource deathEffect;
     protected float upperLimit;
     protected float lowerLimit;
     protected float leftLimit;
@@ -37,6 +38,7 @@ public class Character : MonoBehaviour
         p_life -= damage;
         if (p_life <= 0)
         {
+            deathEffect.Play();
             p_animator.SetBool("Death", true);
         }
     }
