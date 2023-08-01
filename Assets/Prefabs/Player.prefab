@@ -110,8 +110,10 @@ MonoBehaviour:
   p_shootTimeRest: 0
   p_mainCamera: {fileID: 0}
   p_animator: {fileID: 1315373558415782505}
+  deathEffect: {fileID: 0}
   shootEffect: {fileID: -6015333586987852708}
   damageEffect: {fileID: 8404444362153272091}
+  spriteRenderer: {fileID: 6058459360423878036}
 --- !u!61 &6460879491386750797
 BoxCollider2D:
   m_ObjectHideFlags: 0

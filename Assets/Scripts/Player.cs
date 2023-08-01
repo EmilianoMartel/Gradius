@@ -9,8 +9,11 @@ public class Player : Character
 {
     [SerializeField] AudioSource shootEffect;
     [SerializeField] AudioSource damageEffect;
+    [SerializeField] SpriteRenderer spriteRenderer;
     public PlayerDamage mDamage;
     private bool canDamaged = true;
+    private bool endGame = false;
+    private float actualTime;
 
     private void Awake()
     {
@@ -19,6 +22,7 @@ public class Player : Character
 
     void Update()
     {        
+        actualTime += Time.deltaTime;
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             PlayerMove();
@@ -27,6 +31,10 @@ public class Player : Character
         {
             Shoot();
             shootEffect.Play();
+        }
+        if(actualTime >= timeEndGame && endGame)
+        {
+            GameManager.INSTANCE.EndGame("LOSE");
         }
     }
 
@@ -51,8 +59,9 @@ public class Player : Character
 
     protected override void Kill()
     {
-        GameManager.INSTANCE.EndGame("LOSE");
-        base.Kill();
+        spriteRenderer.enabled = false;
+        endGame = true;
+        actualTime = 0;
     }
 
     private void Invulnerability()

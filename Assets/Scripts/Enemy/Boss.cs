@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Boss : Enemy
@@ -8,7 +9,9 @@ public class Boss : Enemy
     [SerializeField] private GameObject pointShoot2;
     [SerializeField] private GameObject pointShoot3;
     [SerializeField] private AudioSource damagedEffect;
+    [SerializeField] SpriteRenderer spriteRenderer;
     private bool line;
+    private bool endGame = false;
 
     private void Awake()
     {
@@ -29,11 +32,15 @@ public class Boss : Enemy
         Move(m_movement);        
         ChangeWay();
         actualTime += Time.deltaTime;
-        if (actualTime >= m_timeShoot)
+        if (actualTime >= m_timeShoot && !endGame)
         {
             Shoot();
             TimeShootSelection();
             actualTime = 0;
+        }
+        if (endGame && actualTime >= timeEndGame)
+        {
+            GameManager.INSTANCE.EndGame("WIN");
         }
     }
 
@@ -67,8 +74,9 @@ public class Boss : Enemy
 
     protected override void Kill()
     {
-        GameManager.INSTANCE.EndGame("WIN");
-        base.Kill();
+        spriteRenderer.enabled = false;
+        endGame = true;
+        actualTime = 0;        
     }
 
     public override void Damage(int damage)

@@ -147,6 +147,7 @@ MonoBehaviour:
   pointShoot2: {fileID: 3844188546028842342}
   pointShoot3: {fileID: 3844188545331015212}
   damagedEffect: {fileID: 6616792186732373280}
+  spriteRenderer: {fileID: 3844188544050934362}
 --- !u!61 &932688653710216013
 BoxCollider2D:
   m_ObjectHideFlags: 0

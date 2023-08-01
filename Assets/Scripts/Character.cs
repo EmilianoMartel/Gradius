@@ -19,6 +19,7 @@ public class Character : MonoBehaviour
     protected float leftLimit;
     protected float rightLimit;
     float yPos;
+    protected static float timeEndGame = 2f;
 
     private void Start()
     {
@@ -38,7 +39,7 @@ public class Character : MonoBehaviour
         p_life -= damage;
         if (p_life <= 0)
         {
-            deathEffect.Play();
+            if (deathEffect != null) deathEffect.Play();
             p_animator.SetBool("Death", true);
         }
     }
