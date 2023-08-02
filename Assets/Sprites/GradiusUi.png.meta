@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2fb3cf4d832dcaa49bfa1fe589ac2f6d
+guid: a896c26e9830d7846bf5284d714abf3c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,49 +105,91 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GradiusUi_0
+      name: "Sin t\xEDtulo-1_0"
       rect:
         serializedVersion: 2
         x: 51
-        y: 916
-        width: 648
-        height: 106
+        y: 921
+        width: 641
+        height: 95
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60f27f54d655d7142821e25ba121de6b
-      internalID: -1681705829
+      spriteID: 253cffee93bbfcb4e89783892a44cd24
+      internalID: -1542708857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GradiusUi_10
+      name: "Sin t\xEDtulo-1_5"
       rect:
         serializedVersion: 2
-        x: 203
-        y: 784
-        width: 218
-        height: 60
+        x: 446
+        y: 975
+        width: 5
+        height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cff3aff29bf9dfe49b3ec3b14ed0d653
-      internalID: 432405452
+      spriteID: f877dd4800d0afe4d83b06a9047c68bf
+      internalID: -1570475614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GradiusUi_13
+      name: "Sin t\xEDtulo-1_9"
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 945
+        width: 6
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9c2b15b11d82646abc52b75c5668c6
+      internalID: -1307196938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sin t\xEDtulo-1_11"
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 791
+        width: 222
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc567f6ec93eb704eaf78332943a2869
+      internalID: -862549552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sin t\xEDtulo-1_13"
       rect:
         serializedVersion: 2
         x: 496
@@ -155,20 +197,20 @@ TextureImporter:
         width: 223
         height: 47
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71cf1be92284eff4ca9e4b2227ce5412
-      internalID: -1589521673
+      spriteID: 449830f42bb16f7438288a93e20ddae9
+      internalID: 1929791623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GradiusUi_14
+      name: "Sin t\xEDtulo-1_14"
       rect:
         serializedVersion: 2
         x: 789
@@ -176,146 +218,146 @@ TextureImporter:
         width: 223
         height: 47
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 946cc0bed7382d94fa90dbcd75b58c8f
-      internalID: 1932447628
+      spriteID: 68577ca6c6798504695a7dc72397b6b1
+      internalID: 802687118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GradiusUi_20
+      name: "Sin t\xEDtulo-1_15"
       rect:
         serializedVersion: 2
-        x: 1243
-        y: 794
-        width: 299
-        height: 59
+        x: 1245
+        y: 797
+        width: 298
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2195901a951e0a48b24ca7feabb5c5b
-      internalID: 2020063831
+      spriteID: f9a80d87ec42736429a528111cfb66dd
+      internalID: 7538926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GradiusUi_21
+      name: "Sin t\xEDtulo-1_24"
       rect:
         serializedVersion: 2
-        x: 203
-        y: 679
-        width: 183
-        height: 60
+        x: 199
+        y: 682
+        width: 188
+        height: 51
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44df17fb7c4da8f4bb5c918fa7d47013
-      internalID: -1363701946
+      spriteID: 624fc0c6a868d5243bc26e38be6160f0
+      internalID: 1408262928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GradiusUi_24
+      name: "Sin t\xEDtulo-1_25"
       rect:
         serializedVersion: 2
         x: 496
         y: 686
-        width: 183
+        width: 190
         height: 47
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c82e938fe9f478542aef5cfbb3ec25b0
-      internalID: 1867246563
+      spriteID: c5ae185519b78134cbe2ddcf60312e76
+      internalID: 38155111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GradiusUi_25
+      name: "Sin t\xEDtulo-1_26"
       rect:
         serializedVersion: 2
         x: 789
         y: 686
-        width: 183
+        width: 190
         height: 47
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b570488c1526424b8a5e9689584a9f4
-      internalID: 2025740104
+      spriteID: 7586bf46ea0c7174baea5dd7d87ae137
+      internalID: -1604555473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GradiusUi_31
+      name: "Sin t\xEDtulo-1_27"
       rect:
         serializedVersion: 2
-        x: 1242
-        y: 690
-        width: 355
-        height: 56
+        x: 1244
+        y: 691
+        width: 356
+        height: 51
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06a126779fcdec84ab6d8a12bff5ab0a
-      internalID: 2006738184
+      spriteID: aa41b9bdc5e120043ac5d275b74f2f19
+      internalID: -759689862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GradiusUi_34
+      name: "Sin t\xEDtulo-1_33"
       rect:
         serializedVersion: 2
-        x: 197
-        y: 562
-        width: 341
-        height: 54
+        x: 203
+        y: 566
+        width: 332
+        height: 49
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8211de0de4a88eb46bc62235d7053d07
-      internalID: 882665381
+      spriteID: 409e0eb3ecb5f3b409b8c6d34041e864
+      internalID: 185436350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GradiusUi_38
+      name: "Sin t\xEDtulo-1_39"
       rect:
         serializedVersion: 2
         x: 600
@@ -323,35 +365,266 @@ TextureImporter:
         width: 340
         height: 47
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d41cec72df3996d42ba8a111b8cc9587
-      internalID: -2107299531
+      spriteID: 7c8f9c99b7899664ea79cea8a21bea8d
+      internalID: -1638853028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GradiusUi_39
+      name: "Sin t\xEDtulo-1_40"
       rect:
         serializedVersion: 2
-        x: 989
-        y: 560
-        width: 346
-        height: 53
+        x: 995
+        y: 566
+        width: 340
+        height: 47
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f3f99b1a549ab341812bc5963da876a
-      internalID: 637886972
+      spriteID: 00db4d0e77890324faae6f0451702de7
+      internalID: -593879615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sin t\xEDtulo-1_41"
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 470
+        width: 384
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe248c9b4e6a144e90116655d74eef0
+      internalID: -118467934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sin t\xEDtulo-1_48"
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 470
+        width: 388
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969e7c04b3a70144ab41a79a9ec4940a
+      internalID: 1319210069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sin t\xEDtulo-1_49"
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 470
+        width: 388
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99cc9074f1635c142a49b55cee7c2bc2
+      internalID: 726199198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sin t\xEDtulo-1_50"
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 371
+        width: 248
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54226c3d0716bf419f5be086c52091d
+      internalID: -2088932999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sin t\xEDtulo-1_54"
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 371
+        width: 251
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f848356d44e112d418954bac565b2fa8
+      internalID: 951881335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sin t\xEDtulo-1_55"
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 371
+        width: 251
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725e18d29b848584a8a6c9be5c865a17
+      internalID: 1767608277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sin t\xEDtulo-1_56"
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 183
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b13a6373b181c9499cc4f02fdab5e30
+      internalID: -433134123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sin t\xEDtulo-1_57"
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 76
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e188f9927ee9c14d9f3ab96726f1fb6
+      internalID: 1248437167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sin t\xEDtulo-1_58"
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 76
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1f4cbb109a8d8488b6b68f0b5f2cc0
+      internalID: 1559113855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sin t\xEDtulo-1_59"
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 76
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6440dd6ad2fb317439960a3c87dd30cf
+      internalID: 1040477500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sin t\xEDtulo-1_60"
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 84
+        width: 424
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818ffdf33b739de48a4c68be626415c9
+      internalID: 1990357853
       vertices: []
       indices: 
       edges: []
@@ -367,47 +640,67 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GradiusUi_0: -1681705829
-      GradiusUi_1: -2017500215
-      GradiusUi_10: 432405452
-      GradiusUi_11: -1075224254
-      GradiusUi_12: 1998966743
-      GradiusUi_13: -1589521673
-      GradiusUi_14: 1932447628
-      GradiusUi_15: -1954350871
-      GradiusUi_16: 1903791751
-      GradiusUi_17: 290246074
-      GradiusUi_18: -1652389745
-      GradiusUi_19: 1339415936
-      GradiusUi_2: -2082151081
-      GradiusUi_20: 2020063831
-      GradiusUi_21: -1363701946
-      GradiusUi_22: -786300821
-      GradiusUi_23: 1031149983
-      GradiusUi_24: 1867246563
-      GradiusUi_25: 2025740104
-      GradiusUi_26: -1563348588
-      GradiusUi_27: -355051944
-      GradiusUi_28: -1385639563
-      GradiusUi_29: -1758605093
-      GradiusUi_3: -219647314
-      GradiusUi_30: 1772013944
-      GradiusUi_31: 2006738184
-      GradiusUi_32: -90074789
-      GradiusUi_33: -800647506
-      GradiusUi_34: 882665381
-      GradiusUi_35: -310121160
-      GradiusUi_36: -1115202528
-      GradiusUi_37: 1809843516
-      GradiusUi_38: -2107299531
-      GradiusUi_39: 637886972
-      GradiusUi_4: -602237362
-      GradiusUi_40: -602797331
-      GradiusUi_5: 1040308570
-      GradiusUi_6: -2129327654
-      GradiusUi_7: 560298178
-      GradiusUi_8: -2074151280
-      GradiusUi_9: -1469473864
+      "Sin t\xEDtulo-1_0": -1542708857
+      "Sin t\xEDtulo-1_1": 601313232
+      "Sin t\xEDtulo-1_10": -378218318
+      "Sin t\xEDtulo-1_11": -862549552
+      "Sin t\xEDtulo-1_12": -706377390
+      "Sin t\xEDtulo-1_13": 1929791623
+      "Sin t\xEDtulo-1_14": 802687118
+      "Sin t\xEDtulo-1_15": 7538926
+      "Sin t\xEDtulo-1_16": 851860734
+      "Sin t\xEDtulo-1_17": 507375835
+      "Sin t\xEDtulo-1_18": -1673434559
+      "Sin t\xEDtulo-1_19": -680652306
+      "Sin t\xEDtulo-1_2": 565542658
+      "Sin t\xEDtulo-1_20": -2122639506
+      "Sin t\xEDtulo-1_21": 1553191407
+      "Sin t\xEDtulo-1_22": 991118635
+      "Sin t\xEDtulo-1_23": -55347745
+      "Sin t\xEDtulo-1_24": 1408262928
+      "Sin t\xEDtulo-1_25": 38155111
+      "Sin t\xEDtulo-1_26": -1604555473
+      "Sin t\xEDtulo-1_27": -759689862
+      "Sin t\xEDtulo-1_28": -214563976
+      "Sin t\xEDtulo-1_29": 646063559
+      "Sin t\xEDtulo-1_3": -1381339883
+      "Sin t\xEDtulo-1_30": -955420066
+      "Sin t\xEDtulo-1_31": -842025501
+      "Sin t\xEDtulo-1_32": 1332837980
+      "Sin t\xEDtulo-1_33": 185436350
+      "Sin t\xEDtulo-1_34": -1024574552
+      "Sin t\xEDtulo-1_35": -115830426
+      "Sin t\xEDtulo-1_36": 693917725
+      "Sin t\xEDtulo-1_37": 709688442
+      "Sin t\xEDtulo-1_38": 437674619
+      "Sin t\xEDtulo-1_39": -1638853028
+      "Sin t\xEDtulo-1_4": 1177425173
+      "Sin t\xEDtulo-1_40": -593879615
+      "Sin t\xEDtulo-1_41": -118467934
+      "Sin t\xEDtulo-1_42": -1248232420
+      "Sin t\xEDtulo-1_43": -1125146551
+      "Sin t\xEDtulo-1_44": -654645811
+      "Sin t\xEDtulo-1_45": -2078567553
+      "Sin t\xEDtulo-1_46": 356218435
+      "Sin t\xEDtulo-1_47": -1290492384
+      "Sin t\xEDtulo-1_48": 1319210069
+      "Sin t\xEDtulo-1_49": 726199198
+      "Sin t\xEDtulo-1_5": -1570475614
+      "Sin t\xEDtulo-1_50": -2088932999
+      "Sin t\xEDtulo-1_51": 826789362
+      "Sin t\xEDtulo-1_52": 1686603250
+      "Sin t\xEDtulo-1_53": 1252044060
+      "Sin t\xEDtulo-1_54": 951881335
+      "Sin t\xEDtulo-1_55": 1767608277
+      "Sin t\xEDtulo-1_56": -433134123
+      "Sin t\xEDtulo-1_57": 1248437167
+      "Sin t\xEDtulo-1_58": 1559113855
+      "Sin t\xEDtulo-1_59": 1040477500
+      "Sin t\xEDtulo-1_6": -1864339233
+      "Sin t\xEDtulo-1_60": 1990357853
+      "Sin t\xEDtulo-1_7": 280891159
+      "Sin t\xEDtulo-1_8": 1069483060
+      "Sin t\xEDtulo-1_9": -1307196938
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
